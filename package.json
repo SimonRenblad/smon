@@ -1,0 +1,30 @@
+{
+  "name": "smon",
+  "version": "1.0.0",
+  "description": "A web app for anything you could possibly need.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "client:build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonRenblad/smon.git"
+  },
+  "author": "Simon Renblad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonRenblad/smon/issues"
+  },
+  "homepage": "https://github.com/SimonRenblad/smon#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
