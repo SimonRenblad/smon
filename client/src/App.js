@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios'
+import axios from 'axios';
+import Box from './threedim/Box';
+import { Canvas, useFrame } from 'react-three-fiber'
 
 class App extends Component {
   state = {
@@ -16,9 +18,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>SMON</h1>
-        <h1>{this.state.response.body}</h1>
+      <div className="container">
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Box position={[-1.2, 0, 0]} />
+          <Box position={[1.2, 0, 0]} />
+        </Canvas>
       </div>
     );
   }
